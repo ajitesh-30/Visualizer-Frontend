@@ -27,36 +27,6 @@ export class FileUpload extends React.Component {
     };
   }
 
-  sortBy(key, data) {
-      return data.sort((a, b) => {
-        var x = parseInt(a[key]); 
-        var y = parseInt(b[key]);
-        return ((x > y) ? -1 : ((x < y) ? 1 : 0));
-      });
-  }
-
-  getPlayerByPosition(position,data){
-    var results=[];
-    for(var i=0;i<data.length;i++)
-    {
-       if(data[i].position===position){
-        results.push(data[i]);
-       } 
-    }
-    return results;
-  }
-
-
-  getAllTeams(data){
-      var uniqueNames = [];
-      console.log(data.length);
-      for(var i = 0; i< data.length; i++){    
-        if(uniqueNames.indexOf(data[i]['Current Club']) === -1){
-            uniqueNames.push(data[i]['Current Club']);        
-          }        
-      }
-      return uniqueNames;
-  } 
 
   render() {
     const players = this.state.players;

@@ -31,9 +31,8 @@ class Player extends Component {
        } 
     }
     return results;
-    
   }
-    sortBy(key, data) {
+  sortBy(key, data) {
       return data.sort((a, b) => {
         var x = parseInt(a[key]); 
         var y = parseInt(b[key]);
